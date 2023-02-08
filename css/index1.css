@@ -1,0 +1,426 @@
+.topbar-warpper{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(51,51,51);
+    line-height: 40px;
+}
+
+.topbar a{
+    color: rgb(176,176,176);
+    font-size: 12px;
+    display: block;
+}
+
+.topbar a:hover{
+    color: white;
+}
+
+.topbar .line{
+    color: #424242;
+    font-size: 12px;
+    margin-top: -1px;
+    margin: 0 8px;
+}
+
+.service,
+.topbar li{
+float: left;
+}
+
+.app{
+    position: relative;
+    z-index: 999;
+}
+
+.app:hover:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: none;
+    border-bottom-color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.app .qrcode{
+    position: absolute;
+    width:124px ;
+    /* height:148px; */
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    left: -40px;
+    line-height: 1;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    transition: height 0.5s;
+}
+
+.app:hover .qrcode{
+    height: 148px;
+
+}
+
+.app .qrcode span{
+    font-size: 14px;
+    color: #000;
+}
+
+.app .qrcode img{
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+    
+}
+
+.user-info{
+    float: right;
+}
+
+.shop-cat{
+    float: right;
+}
+
+.shop-cat{
+    margin-left: 26px;
+    position: relative;
+    z-index: 999;
+}
+
+.shop-cat a{
+    height: 40px;
+    width: 120px;
+    background-color: #424242;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.shop-cat:hover a{
+    color: rgb(255,103,0);
+    background-color: white;
+}
+
+.shop-cat i{
+    margin-right: 2px;
+}
+
+.shop-cat .gwc{
+    width: 360px;
+    height: 0;
+    background-color:white;
+    overflow: hidden;
+    border: 1px solid transparent;
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+    text-align: center;
+    line-height: 8;
+    position: absolute;
+    left: -242px;
+    transition: height 0.5s;
+    z-index: 999;
+}
+
+.shop-cat:hover .gwc{
+height: 100px;
+box-shadow: 0 3px 4px rgba(0,0,0, .4) ;
+}
+
+.header-warpper{
+    height: 100px;
+    background-color: white;
+    position: relative;
+}
+
+.header .logo{
+   float: left;
+    margin-top: 22px;
+
+    /* 隐藏logo中的文字 */
+    text-indent: -9999px;
+}
+
+.header .logo a{
+    display: block;
+    background-image: url(../img/logo-mi2.png);
+    width: 55px;
+    height: 55px;
+    background-size: 55px;
+}
+
+.header .nav-warpper{
+   float: left;
+   margin-left: 7px;
+
+    /* background-color: aqua; */
+}
+
+.header .nav{
+    width: 792px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 58px;
+}
+
+.nav > li{
+    float: left;
+}
+
+.all-goods-warpper{
+    position: relative;
+}
+
+.left-menu{
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    left: -120px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    line-height: 1px;
+    z-index: 99;
+}
+
+.nav .left-menu li a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 30px;
+    font-size: 14px;
+    margin-right: 0;
+    color:#fff;
+}
+
+.nav .left-menu  li:hover a{
+    color:#fff;
+    background-color: #ff6700;
+}
+
+.nav .left-menu a i{
+    float: right;
+    line-height: 42px;
+}
+
+.nav > li a{
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.nav > li a:hover{
+    color: #ff6700;
+}
+
+.nav .all-goods{
+    visibility: hidden;
+}
+
+ .nav .goods-info{
+    width: 100%;
+    height: 0;
+    top: 100px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: #fff;
+    transition: height 0.3s;
+    z-index: 9999;
+}
+
+.nav .show-goods:hover~.goods-info,
+.goods-info:hover{
+    height: 228px;
+    border-top: 1px solid rgb(224, 224, 224);
+    box-shadow: 0 5px 3px rgba(0, 0, 0, .3);
+}
+
+.search-wrapper{
+    width: 296px;
+    height: 50px;
+    float: right;
+    margin-top: 25px;
+    background-color: aqua;
+}
+
+.search-wrapper .search-inp{
+    box-sizing: border-box;
+    width: 244px;
+    height: 50px;
+    float: left;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 0 10px ;
+    /* 去除搜索框本身点击时的框 */
+    outline: none;
+
+}
+
+.search-wrapper .search-btn{
+    width: 52px;
+    height: 50px;
+    color: #616161;
+    border: 1px solid rgb(224, 224, 224);
+    border-left: none;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + button{
+border-color: #ff6700;
+}
+
+.search-wrapper .search-btn:hover{
+    color: #fff;
+    background-color: #ff6700;
+}
+
+.banner{
+    height: 460px;
+    position: relative;
+}
+
+.banner .img-list li{
+    position: absolute;
+}
+
+.banner img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.pointer{
+    position: absolute;
+    bottom: 22px;
+    right: 35px;
+}
+
+.pointer a{
+    float: left;
+    width: 7px ;
+    height: 7px;
+    background-color:rgba(0, 0, 0, .4);
+    border:2px rgba(255, 255, 255, .4) solid;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+
+.pointer a:hover,
+.pointer a.active{
+    border-color: rgba(0, 0, 0, .4);
+    background-color:rgba(255, 255, 255, .4) ;
+}
+
+.prev-next a{
+    width: 41px;
+    height: 69px;
+    position: absolute;
+    background-image: url(../img/icon-slides.png);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.prev-next .prev{
+    left: 234px;
+    background-position: 82px 0;
+}
+
+.prev-next .prev:hover{
+    background-position:0 0;
+}
+
+.prev-next .next{
+    right: 0;
+    background-position: 42px 0;
+}
+
+.prev-next .next:hover{
+    background-position: -42px 0 ;
+}
+
+.back-top{
+    width: 25px;
+    height: 200px;
+    position: fixed;
+    bottom: 100px;
+    right: 50%;
+    margin-right: -638px;
+    z-index: 99;
+}
+
+.back-top-list li{
+    width: 100%;
+    height: 40px;
+    border:1px solid #f5f5f5;
+}
+
+.back-top-list img{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: -1px;
+}
+
+.ad{
+    height: 170px;
+    margin-top: 14px;
+}
+
+.ad .shortcut,
+.ad .imgs{
+    float: left;
+}
+
+.ad .shortcut{
+    width: 228px;
+    height: 168px;
+    padding: 2px 0 0 6px ;
+    margin-right: 14px;
+    background-color: #5f5750;
+}
+
+.ad li{
+    float: left;
+}
+
+.ad .shortcut a{
+    display: block;
+    width: 76px;
+    height: 84px;
+    text-align: center;
+    color: #cfccca;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.ad .shortcut li:hover a{
+    color: #fff;
+}
+
+.ad .shortcut i{
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.ad .imgs li{
+    width: 316px;
+    margin-right: 15px;
+}
+
+.ad .imgs img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.ad .imgs li:last-child{
+    margin-right: 0;
+}
+
+
